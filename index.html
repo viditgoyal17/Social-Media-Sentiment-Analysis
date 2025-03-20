@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Hashtag Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .results-container {
+            margin-top: 30px;
+        }
+        .post {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .post-header {
+            margin-bottom: 10px;
+        }
+        .caption {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+        .sentiment {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .non-abusive {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .abusive {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .comments {
+            margin-top: 15px;
+        }
+        .comment {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .instagram-embed-container {
+            margin: 20px 0;
+            max-width: 540px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .instagram-media {
+            width: 100% !important;
+            max-width: 540px !important;
+            min-width: 326px !important;
+            margin: 0 auto !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instagram Hashtag Sentiment Analyzer</h1>
+    
+    <div class="form-container">
+        <div class="form-group">
+            <label for="hashtag">Hashtag to Scrape (without #):</label>
+            <input type="text" id="hashtag" placeholder="Enter hashtag (e.g. crimepatrol)" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="analysisType">Analysis Type:</label>
+            <select id="analysisType">
+                <option value="light">Light (5 posts, 5 comments)</option>
+                <option value="deep">Deep (10 posts, 10 comments)</option>
+            </select>
+        </div>
+        
+        <button id="submitBtn">Analyze Hashtag</button>
+    </div>
+    
+    <div id="loading" class="loading">
+        <p>Please wait... Scraping and analyzing data. This may take a few minutes.</p>
+        <img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" alt="Loading" width="50">
+    </div>
+    
+    <div id="results" class="results-container"></div>
+    
+    <script src="script.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
