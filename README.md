@@ -55,7 +55,7 @@ Follow these steps to set up and run the project:
 
 ### Step 1: Clone the Repository
 
-    git clone https://github.com/yourusername/InstagramHashtagSentimentAnalyzer.git 
+    git clone https://github.com/viditgoyal17/Instagram-Hastag-Sentiment-Analysis.git 
     cd InstagramHashtagSentimentAnalyzer
 
 
