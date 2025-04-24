@@ -4,34 +4,6 @@ A unified platform for real-time sentiment analysis of Instagram hashtags and Re
 
 ---
 
-## 📁 Project Structure
-
-Instagram/
-├── GenAI Implementation/
-│ ├── hashtag_scraper.py
-│ ├── index.html
-│ ├── instagram_hashtag_posts.json
-│ ├── script.js
-│ ├── server.py
-│ └── [other files]
-└── Transformer Implementation/
-├── hashtag_scraper.py
-├── index.html
-├── instagram_hashtag_posts.json
-├── script.js
-├── server.py
-└── [other files]
-Reddit/
-├── index.html
-├── reddit_scraper.py
-├── reddit_subreddit_posts.json
-├── script.js
-└── server.py
-
-
-
----
-
 ## 🚀 Features
 
 - **Instagram Sentiment Analysis**
@@ -61,7 +33,7 @@ Reddit/
 - OpenAI: Add your API key in `server.py`.
 
 4. **Run the backend server:**
-    python server.py
+    `python server.py`
 
 5. **Open the frontend:**
 - Navigate to `http://localhost:5000` in your browser.
