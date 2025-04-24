@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit Sentiment Analyzer</title>
+</head>
+<body>
+    <h1>Reddit Sentiment Analyzer</h1>
+    <label for="hashtag">Subreddit to Scrape (without r/):</label>
+    <input type="text" id="hashtag" placeholder="Enter subreddit">
+    <label for="analysisType">Analysis Type:</label>
+    <select id="analysisType">
+        <option value="light">Light (5 posts, 5 comments)</option>
+        <option value="dark">Dark (10 posts, 10 comments)</option>
+    </select>
+    <button id="submitBtn">Analyze Subreddit</button>
+    <div id="loading" style="display:none;">Please wait... Scraping and analyzing data. This may take a few minutes.</div>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
