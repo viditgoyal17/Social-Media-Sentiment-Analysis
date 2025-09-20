@@ -27,10 +27,37 @@ A unified platform for real-time sentiment analysis of Instagram hashtags and Re
 2. **Install dependencies:**
 *(Each implementation may have its own requirements. Common: Flask, openai, praw, selenium, transformers, etc.)*
 
-3. **Set up API keys:**
-- Instagram: Update credentials in `hashtag_scraper.py`.
-- Reddit: Add your Reddit API credentials in `reddit_scraper.py`.
-- OpenAI: Add your API key in `server.py`.
+
+3. **Set up API keys and credentials:**
+   - **Instagram:**
+     - Open `hashtag_scraper.py` in the relevant implementation folder (`GenAI Implementation` or `Transformer Implementation`).
+     - Find the section where the script logs in (look for variables like `username` and `password`).
+     - Replace the placeholder or dummy values with your Instagram account credentials.
+     - Example:
+       ```python
+       username = "your_instagram_username"
+       password = "your_instagram_password"
+       ```
+   - **Reddit:**
+     - Open `reddit_scraper.py` in the `Reddit` folder.
+     - Locate the section where the PRAW Reddit instance is created (look for `client_id`, `client_secret`, `user_agent`, etc.).
+     - Replace the placeholders with your Reddit API credentials.
+     - Example:
+       ```python
+       reddit = praw.Reddit(
+           client_id="YOUR_CLIENT_ID",
+           client_secret="YOUR_CLIENT_SECRET",
+           user_agent="YOUR_USER_AGENT"
+       )
+       ```
+   - **OpenAI (GPT):**
+     - Open `server.py` in the relevant implementation folder.
+     - Find the line where the OpenAI API key is set (look for `openai.api_key` or similar).
+     - Replace the placeholder with your actual OpenAI API key.
+     - Example:
+       ```python
+       openai.api_key = "YOUR_OPENAI_API_KEY"
+       ```
 
 4. **Run the backend server:**
     `python server.py`
