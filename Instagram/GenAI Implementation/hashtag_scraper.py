@@ -147,6 +147,8 @@ class HashTagScrapper:
 # Example usage (uncomment and customize as needed)
 if __name__ == '__main__':
     user_scrapper = HashTagScrapper()
-    user_scrapper.login_to_instagram("YOUR_INSTAGRAM_ID", "YOUR_INSAGRAM_PASSWORD")
+    username = "your_instagram_username"
+    password = "your_instagram_password"
+    user_scrapper.login_to_instagram(username, password)
     user_scrapper.scrape_hashtag('hatecomments', 'deep')
     user_scrapper.close_session()
