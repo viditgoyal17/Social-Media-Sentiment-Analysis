@@ -40,7 +40,7 @@ def scrape():
             f'''
 import sys
 sys.path.append('.')
-from hashtag_scraper import HashTagScrapper
+from Instagram.hashtag_scraper import HashTagScrapper
 scraper = HashTagScrapper()
 scraper.login_to_instagram("YOUR_INSTAGRAM_ID", "YOUR_INSAGRAM_PASSWORD")
 scraper.scrape_hashtag("{hashtag}", "{mode}")
